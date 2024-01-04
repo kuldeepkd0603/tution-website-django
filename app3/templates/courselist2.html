@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+    <head>
+  <title>course List</title>
+<link 
+href="{% static 'images\CDGI Logo (1).png' %}"
+ rel="icon">
+ <link href="{% static 'css\style1.css' %}"
+  rel="stylesheet">
+    </head>
+    <body>
+        <div id="maindiv">
+<div id="header">
+<div id="head1">
+<marquee direction="right">
+    Css Template
+</marquee>    
+</div>
+
+  <img src="{% static 'images\CDGI Logo (1).png' %}"
+   id="logo1">
+   <img src="{% static 'images\CDGI Logo (1).png' %}"
+   id="logo2">
+</div>
+{% include 'studentmenu.html' %}
+<div id="content">
+<table border="1" align="center">
+<tr>
+  <th>course id.</th>
+  <th>course name</th>
+  <th>duration</th>
+  <th>fees</th>
+  <th>image</th>
+</tr>
+{% for x in res %}
+<tr>
+  <td>{{ x.courseid }}</td>
+  <td>{{ x.nm }}</td>
+  <td>{{ x.duration }}</td>
+  <td>{{ x.fees }}</td>
+  <td>
+    <img src="{{media_url}}{{x.courseseicon}}"
+    height="50" width="80">
+  </td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+<div id="footer">
+<div align="center" 
+style="color:white">
+ &copy;css template-2023
+</div>
+</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+  <title>Css template</title>
+<link 
+href="{% static 'images\CDGI Logo (1).png' %}"
+ rel="icon">
+ <link href="{% static 'css/style1.css' %}"
+  rel="stylesheet">
+    </head>
+    <body>
+        <div id="maindiv">
+<div id="header">
+<div id="head1">
+<marquee direction="right">
+    Css Template
+</marquee>    
+</div>
+
+  <img src="{% static 'images\CDGI Logo (1).png' %}"
+   id="logo1">
+   <img src="{% static 'images\CDGI Logo (1).png' %}"
+   id="logo2">
+</div>
+
+ {% include 'adminmenu.html' %}
+<div id="content">
+  welcome admin
+</div>
+<div id="footer">
+<div align="center" 
+style="color:white">
+ &copy;css template-2023
+</div>
+</div>
+        </div>
+    </body>
+</html>
